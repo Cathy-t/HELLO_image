@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102190693-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-102190693-1');
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Caption It</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="../static/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../static/device-mockups/device-mockups.css">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/new-age.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/">Caption It</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#features">caption 模型</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#trans">translation 模型</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#container">chen.shiyu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead">
+
+        <div class="container h-100">
+            <div class="row h-100">
+
+<!--                <div class="col-lg-6 my-auto">-->
+                    <div class="container my-auto">
+                        <img src={{content}} class="img-responsive" alt="content" style="height: auto; width: 100%; max-height: 450px">
+                        <h2 style="text-align:center;margin-top: 2%;">
+                            EN: {{ caption }}
+                        </h2>
+                        <p></p>
+                        <h2 style="text-align:center">
+                            CH: {{ ch_caption }}
+                        </h2>
+                    </div>
+<!--                </div>-->
+
+            </div>
+    </header>
+
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="text-muted">caption 模 型 基 于 以 下 文 章 实 现</p>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <img src="../static/img/paper.png" style="max-width: 100%;">
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <div class="container-fluid">
+                        <a target=_blank href="https://arxiv.org/pdf/1411.4555.pdf">
+                            <h3>Show and Tell: A Neural Image Caption Generator</h3>
+                            <p class="text-muted">Oriol Vinyals, Alexander Toshev, Samy Bengio, Dumitru Erhan</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="background:  linear-gradient(to right, #7b4397, #cce5ff);text-align:center">---我是分界线---</div>
+
+    <section class="features" id="trans">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="text-muted">机 器 翻 译 模 型 基 于 以 下 文 章 实 现</p>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <img src="../static/img/transformer.jpg" style="max-width: 100%;">
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <div class="container-fluid">
+                        <a target=_blank href="https://arxiv.org/pdf/1706.03762.pdf">
+                            <h3>Attention is all you need</h3>
+                            <p class="text-muted">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container " id="container">
+            <p>&copy; cathyT 2020. For CV_project.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js "></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js "></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/new-age.min.js "></script>
+</body>
+
+
+</html>

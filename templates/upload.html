@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102190693-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-102190693-1');
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HELLO Image</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="../static/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/new-age.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Image Caption</a>
+            <a class="navbar-brand js-scroll-trigger" href="#retrieval">Image Retrieval</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#features1">caption 模型</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#features2">retrieval 模型</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#container">chen.shiyu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-7 my-auto">
+                    <div id="loading" style="text-align: center">
+                        <h6>由于算力，可能要等几秒 ~~~ ^ ^ </h6>
+                        <div id="loading-gif"></div>
+                        <p>Loading...</p>
+
+                    </div>
+                    <div class="header-content mx-auto" id="content">
+                        <h1 class="mb-5">--看图说话--</h1>
+                        <h3>Upload Image</h3>
+                        <form method=post enctype=multipart/form-data>
+                            <input type=file class="btn btn-outline btn-xl" name=content-file>
+                            <p></p>
+                            <input type="submit" name="submit" class="btn btn-outline btn-xl" data-loading-text="Loading..." value="Upload" onclick="loading();">
+
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 my-auto ">
+                    <a href="https://zhuanlan.zhihu.com/p/27771046" target="-blank" title="「Show and Tell」——图像标注（Image Caption）任务技术综述">
+                        <img src="../static/img/framework.jpg" style="max-width: 100%;">
+                        <img src="../static/img/explain_framework.png" style="max-width: 100%;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features1">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="text-muted">caption 模 型 基 于 以 下 文 章 实 现</p>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <img src="../static/img/paper.png" style="max-width: 100%;">
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <div class="container-fluid">
+                        <a target=_blank href="https://arxiv.org/pdf/1411.4555.pdf">
+                            <h3>Show and Tell: A Neural Image Caption Generator</h3>
+                            <p class="text-muted">Oriol Vinyals, Alexander Toshev, Samy Bengio, Dumitru Erhan</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="masthead" id="retrieval">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-7 my-auto">
+                    <div class="header-content mx-auto" >
+                        <h1 class="mb-5">--图片检索--</h1>
+                        <form action="" enctype='multipart/form-data' method='POST'>
+                            <h2>Select Query Image</h2>
+
+                            <input type="file" name="picture" class="btn btn-outline btn-xl"  />
+
+                            <br>
+                            <input type="submit" value="upload" name="submit" class="btn btn-outline btn-xl" style="margin-top:15px;" />
+                            <br>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 my-auto ">
+                    <a href="https://github.com/SongKaixiang/image_retrieval_platform" target="-blank" title="To the original project">
+                        <img src="../static/img/result_re.png" style="max-width: 100%;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features2">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="text-muted">retrieval 模 型 根 据 以 下 框 架 实 现</p>
+                <hr>
+            </div>
+            <div class="row">
+                <a href="https://github.com/MaxChanger/pytorch-cifar" target="-blank" title="To the original project">
+                        <img src="../static/img/dainet.png" style="max-width: 100%;">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container " id="container">
+            <p>&copy; cathyT 2020. For CV_project.</p>
+        </div>
+    </footer>
+
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js "></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js "></script>
+    
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/new-age.min.js "></script>
+
+    <script type="text/javascript">// <![CDATA[
+        function loading() {
+            $("#loading").show();
+            $("#loading-gif").show();
+            $("#content").hide();
+        }
+    // ]]></script>
+    
+</body>
+
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Image Retrieval</title>
+    <style type="text/css">
+        .imagestyle {
+            /* margin-top: 100px; */
+            /* width:200px; */
+            height: 200px;
+            border-radius: 20px;
+        }
+
+        .image_query_style {
+            /* margin-top: 100px; */
+            width: 400px;
+            /* height:200px; */
+            border-radius: 20px;
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102190693-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-102190693-1');
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="../static/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/new-age.css" rel="stylesheet">
+</head>
+
+<body style="background:  linear-gradient(to right, #7b4397, #cce5ff)">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/">Image Retrieval</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#features2">retrieval 模型</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#container">chen.shiyu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div style="padding-left: 60px; padding-right: 60px; padding-top: 100px;padding-bottom: 3%;">
+
+        <div style="width:450px; float:left;">
+
+            <h3 style="color:#FFFFFF">{{message}}</h3>
+            <img class="image_query_style" src="{{ img_query }}" width="400" />
+        </div>
+
+        <div style=" margin-left:550px;">
+            <h2 style="color:#FFFFFF">Retrieval result:</h2>
+                <h4 style="color:#FFFFFF">Similarity of top 3: {{sml1}}, {{sml2}}, {{sml3}}</h4>
+                <div>
+                    <img class="imagestyle" src="{{img1_tmb}}" overflow=hidden />
+                    <img class="imagestyle" src="{{img2_tmb}}" overflow=hidden />
+                    <img class="imagestyle" src="{{img3_tmb}}" overflow=hidden />
+                </div>
+                <br>
+                <h4 style="color:#FFFFFF">Similarity of 4 ~ 6: {{sml4}}, {{sml5}}, {{sml6}}</h4>
+                <div>
+                    <img class="imagestyle" src="{{img4_tmb}}" overflow=hidden />
+                    <img class="imagestyle" src="{{img5_tmb}}" overflow=hidden />
+                    <img class="imagestyle" src="{{img6_tmb}}" overflow=hidden />
+                </div>
+                <br>
+                <h4 style="color:#FFFFFF">Similarity of 7 ~ 9: {{sml7}}, {{sml8}}, {{sml9}}</h4>
+                <div>
+                    <img class="imagestyle" src="{{img7_tmb}}" overflow=hidden />
+                    <img class="imagestyle" src="{{img8_tmb}}" overflow=hidden />
+                    <img class="imagestyle" src="{{img9_tmb}}" overflow=hidden />
+                </div>
+        </div>
+    </div>
+
+    <section class="features" id="features2" style="background-color:#FFFFFF">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="text-muted">retrieval 模 型 根 据 以 下 框 架 实 现</p>
+                <hr>
+            </div>
+            <div class="row">
+                <a href="https://github.com/MaxChanger/pytorch-cifar" target="-blank" title="To the original project">
+                        <img src="../static/img/dainet.png" style="max-width: 100%;">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container " id="container">
+            <p>&copy; cathyT 2020. For CV_project.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js "></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js "></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/new-age.min.js "></script>
+</body>
+
+</html>
